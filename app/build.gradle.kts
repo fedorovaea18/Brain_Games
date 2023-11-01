@@ -1,6 +1,7 @@
 plugins {
     id("java")
     application
+    checkstyle
 }
 
 group = "hexlet.code"
@@ -30,4 +31,3 @@ tasks.named<JavaExec>("run") {
 tasks.test {
     useJUnitPlatform()
 }
-
