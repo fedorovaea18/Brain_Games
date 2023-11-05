@@ -1,5 +1,11 @@
 package hexlet.code;
 
+//import hexlet.code.games.FirstGame;
+//import hexlet.code.games.SecondGame;
+
+import hexlet.code.games.FirstGame;
+import hexlet.code.games.SecondGame;
+
 import java.util.Scanner;
 
 public class App {
@@ -8,8 +14,9 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("2 - Even");
         System.out.println("1 - Greet");
+        System.out.println("2 - Even");
+        System.out.println("3 - Calc");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -23,11 +30,14 @@ public class App {
                 Cli.greeting();
                 break;
             case 2:
-                Game.isEven();
+                Engine.runGame(new FirstGame());
+                break;
+            case 3:
+                Engine.runGame(new SecondGame());
                 break;
 
             default:
-                System.out.println("Invalid choice");
+                System.out.println("Wrong choice");
                 break;
         }
     }
