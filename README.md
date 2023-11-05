@@ -3,3 +3,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/bc953fb0ab378995dab3/maintainability)](https://codeclimate.com/github/hexlet-boilerplates/java-package/maintainability)
 
 https://asciinema.org/a/cQosRv0neHjidhCftic2KLich
+https://asciinema.org/a/s5n00wb1tsMi38tPoSzBUgypw
