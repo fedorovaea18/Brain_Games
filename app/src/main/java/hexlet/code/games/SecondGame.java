@@ -13,8 +13,6 @@ public class SecondGame implements Engine.Game {
         int randomNumberSecond = (int) (Math.random() * 10) + 1;
         int randomOperationNumber = (int) (Math.random() * 2);
         String mathOperation = null;
-        int result = 0;
-
 
         switch (randomOperationNumber) {
             case 0:
@@ -32,7 +30,6 @@ public class SecondGame implements Engine.Game {
             default:
                 break;
         }
-        this.result = result;
         return "Question: " + randomNumberFirst + " " + mathOperation + " " + randomNumberSecond;
     }
     public String getCorrectAnswer(String question) {
