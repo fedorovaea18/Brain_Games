@@ -20,7 +20,7 @@ public class FirstGame implements Engine.Game {
     }
 
     public boolean isCorrectAnswer(String question, String userAnswer) {
-        String correctAnswer = getCorrectAnswer(question);
-        return userAnswer.equalsIgnoreCase(correctAnswer);
+        int correctAnswer = Integer.parseInt(getCorrectAnswer(question));
+        return userAnswer.equalsIgnoreCase(String.valueOf(correctAnswer));
     }
 }
