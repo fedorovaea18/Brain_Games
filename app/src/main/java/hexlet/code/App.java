@@ -6,7 +6,6 @@ import hexlet.code.games.ThirdGame;
 import hexlet.code.games.FourthGame;
 import hexlet.code.games.FifthGame;
 
-
 import java.util.Scanner;
 
 public class App {

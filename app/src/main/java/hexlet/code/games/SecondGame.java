@@ -3,15 +3,18 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class SecondGame implements Engine.Game {
+    private static final int NUMBER_MIN = 1;
+    private static final int NUMBER_MAX = 100;
+    private static final int OPERATION_COUNT = 100;
     private int result;
     public String getRules() {
         return "What is the result of the expression?";
     }
 
     public String getQuestion() {
-        int randomNumberFirst = (int) (Math.random() * 100) + 1;
-        int randomNumberSecond = (int) (Math.random() * 100) + 1;
-        int randomOperationNumber = (int) (Math.random() * 3);
+        int randomNumberFirst = (int) (Math.random() * NUMBER_MAX) + NUMBER_MIN;
+        int randomNumberSecond = (int) (Math.random() * NUMBER_MAX) + NUMBER_MIN;
+        int randomOperationNumber = (int) (Math.random() * OPERATION_COUNT);
         String mathOperation = null;
 
         switch (randomOperationNumber) {
