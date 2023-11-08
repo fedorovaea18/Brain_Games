@@ -10,6 +10,13 @@ import hexlet.code.games.FifthGame;
 import java.util.Scanner;
 
 public class App {
+    private static final int GREET = 1;
+    private static final int EVEN_GAME = 2;
+    private static final int CALC_GAME = 3;
+    private static final int GCD_GAME = 4;
+    private static final int PROGRESSION_GAME = 5;
+    private static final int PRIME_GAME = 6;
+    private static final int EXIT = 0;
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -27,25 +34,25 @@ public class App {
         int gameNumber = scanner.nextInt();
 
         switch (gameNumber) {
-            case 0:
+            case EXIT:
                 System.out.println("Goodbye!");
                 break;
-            case 1:
+            case GREET:
                 Cli.greeting();
                 break;
-            case 2:
+            case EVEN_GAME:
                 Engine.runGame(new FirstGame());
                 break;
-            case 3:
+            case CALC_GAME:
                 Engine.runGame(new SecondGame());
                 break;
-            case 4:
+            case GCD_GAME:
                 Engine.runGame(new ThirdGame());
                 break;
-            case 5:
+            case PROGRESSION_GAME:
                 Engine.runGame(new FourthGame());
                 break;
-            case 6:
+            case PRIME_GAME:
                 Engine.runGame(new FifthGame());
                 break;
             default:
