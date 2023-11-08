@@ -12,13 +12,15 @@ public class FourthGame implements Engine.Game {
         int lengthProgression = (int) (Math.random() * 6) + 5;
         int missingIndex = (int) (Math.random() * lengthProgression);
         int differenceProgression = (int) (Math.random() * 10) + 1;
+        int firstNumber = (int) (Math.random() * 10) + 1;
+        int firstNumberShift = (int) (Math.random() * 10);
         String progression = "";
         for (int i = 0; i < lengthProgression; i++) {
             if (i == missingIndex) {
                 progression = progression + ".. ";
-                missingNumber = missingIndex * differenceProgression;
+                missingNumber = firstNumber + (missingIndex * differenceProgression) + firstNumberShift;
             } else {
-                progression = progression + (i * differenceProgression) + " ";
+                progression = progression + (firstNumber + firstNumberShift + (i * differenceProgression)) + " ";
             }
         }
         return "Question: " + progression;

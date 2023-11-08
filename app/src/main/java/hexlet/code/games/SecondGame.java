@@ -11,7 +11,7 @@ public class SecondGame implements Engine.Game {
     public String getQuestion() {
         int randomNumberFirst = (int) (Math.random() * 100) + 1;
         int randomNumberSecond = (int) (Math.random() * 100) + 1;
-        int randomOperationNumber = (int) (Math.random() * 2);
+        int randomOperationNumber = (int) (Math.random() * 3);
         String mathOperation = null;
 
         switch (randomOperationNumber) {
