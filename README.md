@@ -7,5 +7,6 @@ https://asciinema.org/a/s5n00wb1tsMi38tPoSzBUgypw - проверка кальк�
 https://asciinema.org/a/YOlEwoJCri1qYTHjPolJkgqV2 - проверка НОД
 https://asciinema.org/a/B8DyZibSnOL4vM81mCwshSwGR - проверка прогрессии
 https://asciinema.org/a/HZcnqUaJUSODMDNCy0lk2GSwH - проверка является ли число простым
-https://asciinema.org/a/TfBiIio1ChG9tpgyLtbVzIWyF
+https://asciinema.org/a/iOpwPSg5cK0ixI092B6BT4Op8 - полный проект
+
 
