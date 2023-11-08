@@ -28,8 +28,8 @@ public class FourthGame implements Engine.Game {
         return String.valueOf(missingNumber);
     }
 
-    public boolean isCorrectAnswer(String question, String userAnswer) {
-        int correctAnswer = Integer.parseInt(getCorrectAnswer(question));
-        return userAnswer.equalsIgnoreCase(String.valueOf(correctAnswer));
+    public boolean checkCorrectAnswer(String question, String userAnswer) {
+        String correctAnswer = getCorrectAnswer(question);
+        return userAnswer.equalsIgnoreCase(correctAnswer);
     }
 }

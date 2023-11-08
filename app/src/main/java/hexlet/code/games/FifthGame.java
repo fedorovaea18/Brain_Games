@@ -2,9 +2,10 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class FirstGame implements Engine.Game {
+public class FifthGame implements Engine.Game {
+
     public String getRules() {
-        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
     public String getQuestion() {
@@ -14,7 +15,16 @@ public class FirstGame implements Engine.Game {
 
     public String getCorrectAnswer(String question) {
         int number = Integer.parseInt(question.substring(10));
-        return number % 2 == 0 ? "yes" : "no";
+        if (number <= 1) {
+            return "no";
+        } else {
+            for (int i = 2; i <= number / 2; i++) {
+                if (number % i == 0) {
+                    return "no";
+                }
+            }
+            return "yes";
+        }
     }
 
     public boolean checkCorrectAnswer(String question, String userAnswer) {

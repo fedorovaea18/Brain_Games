@@ -16,16 +16,17 @@ public class Engine {
 
         for (int i = 0; i < 3; i++) {
             String question = game.getQuestion();
-            System.out.println("Question: " + question);
+            System.out.println(question);
 
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
 
-            if (game.isCorrectAnswer(question, userAnswer)) {
+            if (game.checkCorrectAnswer(question, userAnswer)) {
                 System.out.println("Correct!");
                 correctAnswerCount++;
             } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(." + "Correct answer was '" + game.getCorrectAnswer(question) + "'.");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. " + "Correct answer was '"
+                        + game.getCorrectAnswer(question) + "'.");
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             }
@@ -40,6 +41,6 @@ public class Engine {
         String getRules();
         String getQuestion();
         String getCorrectAnswer(String question);
-        boolean isCorrectAnswer(String question, String userAnswer);
+        boolean checkCorrectAnswer(String question, String userAnswer);
     }
 }

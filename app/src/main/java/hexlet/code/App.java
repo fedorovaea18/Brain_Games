@@ -1,9 +1,11 @@
 package hexlet.code;
 
 import hexlet.code.games.FirstGame;
-import hexlet.code.games.FourthGame;
 import hexlet.code.games.SecondGame;
 import hexlet.code.games.ThirdGame;
+import hexlet.code.games.FourthGame;
+import hexlet.code.games.FifthGame;
+
 
 import java.util.Scanner;
 
@@ -18,6 +20,7 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -42,7 +45,9 @@ public class App {
             case 5:
                 Engine.runGame(new FourthGame());
                 break;
-
+            case 6:
+                Engine.runGame(new FifthGame());
+                break;
             default:
                 System.out.println("Wrong choice");
                 break;

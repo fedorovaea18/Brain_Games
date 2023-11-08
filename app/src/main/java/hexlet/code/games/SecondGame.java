@@ -9,8 +9,8 @@ public class SecondGame implements Engine.Game {
     }
 
     public String getQuestion() {
-        int randomNumberFirst = (int) (Math.random() * 10) + 1;
-        int randomNumberSecond = (int) (Math.random() * 10) + 1;
+        int randomNumberFirst = (int) (Math.random() * 100) + 1;
+        int randomNumberSecond = (int) (Math.random() * 100) + 1;
         int randomOperationNumber = (int) (Math.random() * 2);
         String mathOperation = null;
 
@@ -36,8 +36,8 @@ public class SecondGame implements Engine.Game {
         return String.valueOf(result);
     }
 
-    public boolean isCorrectAnswer(String question, String userAnswer) {
-        int correctAnswer = Integer.parseInt(getCorrectAnswer(question));
-        return userAnswer.equalsIgnoreCase(String.valueOf(correctAnswer));
+    public boolean checkCorrectAnswer(String question, String userAnswer) {
+        String correctAnswer = getCorrectAnswer(question);
+        return userAnswer.equalsIgnoreCase(correctAnswer);
     }
 }
