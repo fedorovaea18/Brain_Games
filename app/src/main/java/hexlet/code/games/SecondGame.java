@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 public class SecondGame implements Engine.Game {
     private static final int NUMBER_MIN = 1;
     private static final int NUMBER_MAX = 100;
-    private static final int OPERATION_COUNT = 100;
+    private static final int OPERATION_COUNT = 3;
     private int result;
     public String getRules() {
         return "What is the result of the expression?";
