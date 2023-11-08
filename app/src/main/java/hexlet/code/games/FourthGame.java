@@ -9,7 +9,7 @@ public class FourthGame implements Engine.Game {
     }
 
     public String getQuestion() {
-        int lengthProgression = (int) (Math.random() * 6) + 5;
+        int lengthProgression = (int) (Math.random() * 5) + 5;
         int missingIndex = (int) (Math.random() * lengthProgression);
         int differenceProgression = (int) (Math.random() * 10) + 1;
         int firstNumber = (int) (Math.random() * 10) + 1;
