@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 public class FourthGame {
     public static void play() {
         String userName = Engine.getName();
-        System.out.println("What number is missing in the arithmetic progression?");
+        System.out.println("What number is missing in the progression?");
 
         int correctAnswersCount = 0;
         int attemptsCount = 3;
