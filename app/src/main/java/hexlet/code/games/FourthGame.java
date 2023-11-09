@@ -35,7 +35,7 @@ public class FourthGame {
 
     public static String generateQuestion(int startNumber, int progressionStep,
                                           int progressionLength, int missingIndex) {
-        String question = " ";
+        String question = "";
         for (int i = 0; i < progressionLength; i++) {
             if (i == missingIndex) {
                 question = question + ".." + " ";
@@ -48,8 +48,6 @@ public class FourthGame {
 
 
     public static int generateRandomLength() {
-        int minProgressionLength = 6;
-        int maxProgressionLength = 5;
         return (int) (Math.random() * 6) + 5;
     }
 }
