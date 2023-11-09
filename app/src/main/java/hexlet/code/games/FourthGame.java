@@ -38,7 +38,7 @@ public class FourthGame {
         String question = " ";
         for (int i = 0; i < progressionLength; i++) {
             if (i == missingIndex) {
-                question = question + ".. ";
+                question = question + ".." + " ";
             } else {
                 question = question + (startNumber + i * progressionStep) + " ";
             }
