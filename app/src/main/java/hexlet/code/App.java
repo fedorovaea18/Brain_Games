@@ -40,19 +40,19 @@ public class App {
                 Cli.greeting();
                 break;
             case EVEN_GAME:
-                Engine.runGame(new FirstGame());
+                FirstGame.play();
                 break;
             case CALC_GAME:
-                Engine.runGame(new SecondGame());
+                SecondGame.play();
                 break;
             case GCD_GAME:
-                Engine.runGame(new ThirdGame());
+                ThirdGame.play();
                 break;
             case PROGRESSION_GAME:
-                Engine.runGame(new FourthGame());
+                FourthGame.play();
                 break;
             case PRIME_GAME:
-                Engine.runGame(new FifthGame());
+                FifthGame.play();
                 break;
             default:
                 System.out.println("Wrong choice");

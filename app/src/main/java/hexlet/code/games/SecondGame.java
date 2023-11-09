@@ -2,45 +2,52 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class SecondGame implements Engine.Game {
-    private static final int NUMBER_MIN = 1;
-    private static final int NUMBER_MAX = 100;
-    private static final int OPERATION_COUNT = 3;
-    private int result;
-    public String getRules() {
-        return "What is the result of the expression?";
+public class SecondGame {
+    public static void play() {
+        String userName = Engine.getName();
+        System.out.println("What is the result of the expression?");
+
+        int correctAnswersCount = 0;
+        int attemptsCount = 3;
+
+        while (correctAnswersCount < attemptsCount) {
+            int numberFirst = Engine.generateRandomNumber();
+            int numberSecond = Engine.generateRandomNumber();
+            char operator = generateRandomOperator();
+            String question = numberFirst + " " + operator + " " + numberSecond;
+            Engine.generateQuestion(question);
+            int correctAnswer = findExpression(numberFirst, numberSecond, operator);
+            String userAnswer = Engine.getUserAnswer();
+
+            if (userAnswer.equals(String.valueOf(correctAnswer))) {
+                Engine.messageCorrect();
+                correctAnswersCount++;
+            } else {
+                Engine.showAnswer(false, userAnswer, String.valueOf(correctAnswer));
+                Engine.messageTryAgain(userName);
+                return;
+            }
+        }
+        Engine.messageCongratulations(userName);
     }
 
-    public String getQuestion() {
-        int randomNumberFirst = (int) (Math.random() * NUMBER_MAX) + NUMBER_MIN;
-        int randomNumberSecond = (int) (Math.random() * NUMBER_MAX) + NUMBER_MIN;
-        int randomOperationNumber = (int) (Math.random() * OPERATION_COUNT);
-        String mathOperation = null;
+    public static char generateRandomOperator() {
+        String mathOperator = "+-*";
+        int randomIndex = (int) (Math.random() * mathOperator.length());
+        return mathOperator.charAt(randomIndex);
+    }
 
-        switch (randomOperationNumber) {
-            case 0:
-                mathOperation = "+";
-                result = randomNumberFirst + randomNumberSecond;
-                break;
-            case 1:
-                mathOperation = "-";
-                result = randomNumberFirst - randomNumberSecond;
-                break;
-            case 2:
-                mathOperation = "*";
-                result = randomNumberFirst * randomNumberSecond;
-                break;
+    public static int findExpression(int numberFirst, int numberSecond, char mathOperator) {
+        switch (mathOperator) {
+            case '+':
+                return numberFirst + numberSecond;
+            case '-':
+                return numberFirst - numberSecond;
+            case '*':
+                return numberFirst * numberSecond;
             default:
                 break;
         }
-        return "Question: " + randomNumberFirst + " " + mathOperation + " " + randomNumberSecond;
-    }
-    public String getCorrectAnswer(String question) {
-        return String.valueOf(result);
-    }
-
-    public boolean checkCorrectAnswer(String question, String userAnswer) {
-        String correctAnswer = getCorrectAnswer(question);
-        return userAnswer.equalsIgnoreCase(correctAnswer);
+        return numberFirst;
     }
 }

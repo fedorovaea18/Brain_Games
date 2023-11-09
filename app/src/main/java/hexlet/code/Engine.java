@@ -3,44 +3,49 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static void runGame(Game game) {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String getName() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
+        Scanner scanner = new Scanner(System.in);
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
-        System.out.println(game.getRules());
+        return userName;
+    }
 
-        int correctAnswerCount = 0;
+    public static void generateQuestion(String question) {
+        System.out.println("Question: " + question);
+    }
 
-        for (int i = 0; i < 3; i++) {
-            String question = game.getQuestion();
-            System.out.println(question);
+    public static String getUserAnswer() {
+        System.out.print("Your answer: ");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
 
-            System.out.print("Your answer: ");
-            String userAnswer = scanner.next();
-
-            if (game.checkCorrectAnswer(question, userAnswer)) {
-                System.out.println("Correct!");
-                correctAnswerCount++;
-            } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. " + "Correct answer was '"
-                        + game.getCorrectAnswer(question) + "'.");
-                System.out.println("Let's try again, " + userName + "!");
-                return;
-            }
-        }
-
-        if (correctAnswerCount == 3) {
-            System.out.println("Congratulations, " + userName + "!");
+    public static void showAnswer(boolean isCorrect, String userAnswer, String correctAnswer) {
+        if (isCorrect) {
+            System.out.println("Correct!");
+        } else {
+            System.out.println("'" + userAnswer + "' is wrong answer ;(. "
+                    + "Correct answer was '" + correctAnswer + "'.");
         }
     }
 
-    public interface Game {
-        String getRules();
-        String getQuestion();
-        String getCorrectAnswer(String question);
-        boolean checkCorrectAnswer(String question, String userAnswer);
+    public static void messageCorrect() {
+        System.out.println("Correct!");
+    }
+
+    public static void messageTryAgain(String name) {
+        System.out.println("Let's try again, " + name + "!");
+    }
+
+    public static void messageCongratulations(String name) {
+        System.out.println("Congratulations, " + name + "!");
+    }
+
+    public static int generateRandomNumber() {
+        int minRandomNumber = 1;
+        int maxRandomNumber = 100;
+        return (int) (Math.random() * (maxRandomNumber - minRandomNumber + 1)) + minRandomNumber;
     }
 }

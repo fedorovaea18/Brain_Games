@@ -2,34 +2,39 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class ThirdGame implements Engine.Game {
-    private int randomNumberFirst;
-    private int randomNumberSecond;
+public class ThirdGame {
+    public static void play() {
+        String userName = Engine.getName();
+        System.out.println("Find the greatest common divisor of given numbers.");
 
-    public String getRules() {
-        return "Find the greatest common divisor of given numbers.";
-    }
+        int correctAnswersCount = 0;
+        int attemptsCount = 3;
 
-    public String getQuestion() {
-        randomNumberFirst = (int) (Math.random() * 100) + 1;
-        randomNumberSecond = (int) (Math.random() * 100) + 1;
-        return "Question: " + randomNumberFirst + " " + randomNumberSecond;
-    }
+        while (correctAnswersCount < attemptsCount) {
+            int numberFirst = Engine.generateRandomNumber();
+            int numberSecond = Engine.generateRandomNumber();
+            Engine.generateQuestion(numberFirst + " " + numberSecond);
+            int correctAnswer = findGCD(numberFirst, numberSecond);
+            String userAnswer = Engine.getUserAnswer();
 
-    public String getCorrectAnswer(String question) {
-        int maxNumber = Math.max(randomNumberFirst, randomNumberSecond);
-        int minNumber = Math.min(randomNumberFirst, randomNumberSecond);
-        int result;
-        while (minNumber != 0) {
-            result = minNumber;
-            minNumber = maxNumber % minNumber;
-            maxNumber = result;
+            if (userAnswer.equals(String.valueOf(correctAnswer))) {
+                Engine.messageCorrect();
+                correctAnswersCount++;
+            } else {
+                Engine.showAnswer(false, userAnswer, String.valueOf(correctAnswer));
+                Engine.messageTryAgain(userName);
+                return;
+            }
         }
-        return String.valueOf(maxNumber);
+        Engine.messageCongratulations(userName);
     }
 
-    public boolean checkCorrectAnswer(String question, String userAnswer) {
-        String correctAnswer = getCorrectAnswer(question);
-        return userAnswer.equalsIgnoreCase(correctAnswer);
+    public static int findGCD(int numberFirst, int numberSecond) {
+        while (numberSecond != 0) {
+            int result = numberSecond;
+            numberSecond = numberFirst % numberSecond;
+            numberFirst = result;
+        }
+        return numberFirst;
     }
 }

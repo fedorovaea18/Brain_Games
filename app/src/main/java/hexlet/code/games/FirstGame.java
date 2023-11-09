@@ -2,26 +2,29 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class FirstGame implements Engine.Game {
-    private static final int NUMBER_MIN = 1;
-    private static final int NUMBER_MAX = 100;
+public class FirstGame {
+    public static void play() {
+        String userName = Engine.getName();
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-    public String getRules() {
-        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
-    }
+        int correctAnswersCount = 0;
+        int attemptsCount = 3;
 
-    public String getQuestion() {
-        int randomNumber = (int) (Math.random() * NUMBER_MAX) + NUMBER_MIN;
-        return "Question: " + randomNumber;
-    }
+        while (correctAnswersCount < attemptsCount) {
+            int number = Engine.generateRandomNumber();
+            Engine.generateQuestion(String.valueOf(number));
+            String correctAnswer = number % 2 == 0 ? "yes" : "no";
+            String userAnswer = Engine.getUserAnswer();
 
-    public String getCorrectAnswer(String question) {
-        int number = Integer.parseInt(question.substring(10));
-        return number % 2 == 0 ? "yes" : "no";
-    }
-
-    public boolean checkCorrectAnswer(String question, String userAnswer) {
-        String correctAnswer = getCorrectAnswer(question);
-        return userAnswer.equalsIgnoreCase(correctAnswer);
+            if (userAnswer.equals(correctAnswer)) {
+                Engine.messageCorrect();
+                correctAnswersCount++;
+            } else {
+                Engine.showAnswer(false, userAnswer, correctAnswer);
+                Engine.messageTryAgain(userName);
+                return;
+            }
+        }
+        Engine.messageCongratulations(userName);
     }
 }

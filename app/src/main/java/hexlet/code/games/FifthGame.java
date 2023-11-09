@@ -2,33 +2,42 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class FifthGame implements Engine.Game {
+public class FifthGame {
+    public static void play() {
+        String userName = Engine.getName();
+        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
-    public String getRules() {
-        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        int correctAnswersCount = 0;
+        int attemptsCount = 3;
+
+        while (correctAnswersCount < attemptsCount) {
+            int number = Engine.generateRandomNumber();
+            Engine.generateQuestion(String.valueOf(number));
+            String correctAnswer = isPrime(number) ? "yes" : "no";
+            String userAnswer = Engine.getUserAnswer();
+
+            if (userAnswer.equals(correctAnswer)) {
+                Engine.messageCorrect();
+                correctAnswersCount++;
+            } else {
+                Engine.showAnswer(false, userAnswer, correctAnswer);
+                Engine.messageTryAgain(userName);
+                return;
+            }
+        }
+        Engine.messageCongratulations(userName);
     }
 
-    public String getQuestion() {
-        int randomNumber = (int) (Math.random() * 100) + 1;
-        return "Question: " + randomNumber;
-    }
-
-    public String getCorrectAnswer(String question) {
-        int number = Integer.parseInt(question.substring(10));
+    public static boolean isPrime(int number) {
         if (number <= 1) {
-            return "no";
+            return false;
         } else {
             for (int i = 2; i <= number / 2; i++) {
                 if (number % i == 0) {
-                    return "no";
+                    return false;
                 }
             }
-            return "yes";
+            return true;
         }
-    }
-
-    public boolean checkCorrectAnswer(String question, String userAnswer) {
-        String correctAnswer = getCorrectAnswer(question);
-        return userAnswer.equalsIgnoreCase(correctAnswer);
     }
 }
