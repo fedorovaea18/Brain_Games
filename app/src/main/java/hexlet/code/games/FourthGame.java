@@ -49,7 +49,7 @@ public class FourthGame {
 
     public static int generateRandomLength() {
         int minProgressionLength = 6;
-        int maxProgressionLength = 10;
-        return (int) (Math.random() * (maxProgressionLength - minProgressionLength + 1)) + minProgressionLength;
+        int maxProgressionLength = 5;
+        return (int) (Math.random() * 6) + 5;
     }
 }
