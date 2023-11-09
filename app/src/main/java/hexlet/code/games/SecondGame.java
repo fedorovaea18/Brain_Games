@@ -3,14 +3,14 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class SecondGame {
+    public static final int ATTEMPTS_COUNT = 3;
     public static void play() {
         String userName = Engine.getName();
         System.out.println("What is the result of the expression?");
 
         int correctAnswersCount = 0;
-        int attemptsCount = 3;
 
-        while (correctAnswersCount < attemptsCount) {
+        while (correctAnswersCount < ATTEMPTS_COUNT) {
             int numberFirst = Engine.generateRandomNumber();
             int numberSecond = Engine.generateRandomNumber();
             char operator = generateRandomOperator();

@@ -3,14 +3,16 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class FourthGame {
+    public static final int ATTEMPTS_COUNT = 3;
+    private static final int MIN_LENGTH = 6;
+    private static final int MAX_LENGTH = 10;
     public static void play() {
         String userName = Engine.getName();
         System.out.println("What number is missing in the progression?");
 
         int correctAnswersCount = 0;
-        int attemptsCount = 3;
 
-        while (correctAnswersCount < attemptsCount) {
+        while (correctAnswersCount < ATTEMPTS_COUNT) {
             int startNumber = Engine.generateRandomNumber();
             int progressionStep = Engine.generateRandomNumber();
             int progressionLength = generateRandomLength();
@@ -46,8 +48,7 @@ public class FourthGame {
         return question;
     }
 
-
     public static int generateRandomLength() {
-        return (int) (Math.random() * 6) + 5;
+        return (int) (Math.random() * (MAX_LENGTH - MIN_LENGTH + 1)) + MIN_LENGTH;
     }
 }

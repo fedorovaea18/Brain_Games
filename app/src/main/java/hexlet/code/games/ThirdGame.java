@@ -3,14 +3,14 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class ThirdGame {
+    public static final int ATTEMPTS_COUNT = 3;
     public static void play() {
         String userName = Engine.getName();
         System.out.println("Find the greatest common divisor of given numbers.");
 
         int correctAnswersCount = 0;
-        int attemptsCount = 3;
 
-        while (correctAnswersCount < attemptsCount) {
+        while (correctAnswersCount < ATTEMPTS_COUNT) {
             int numberFirst = Engine.generateRandomNumber();
             int numberSecond = Engine.generateRandomNumber();
             Engine.generateQuestion(numberFirst + " " + numberSecond);

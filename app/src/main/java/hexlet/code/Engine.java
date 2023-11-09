@@ -3,6 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+    private static final int MIN_LENGTH = 1;
+    private static final int MAX_LENGTH = 50;
     public static String getName() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -44,8 +46,6 @@ public class Engine {
     }
 
     public static int generateRandomNumber() {
-        int minRandomNumber = 1;
-        int maxRandomNumber = 100;
-        return (int) (Math.random() * (maxRandomNumber - minRandomNumber + 1)) + minRandomNumber;
+        return (int) (Math.random() * (MAX_LENGTH - MIN_LENGTH + 1)) + MIN_LENGTH;
     }
 }

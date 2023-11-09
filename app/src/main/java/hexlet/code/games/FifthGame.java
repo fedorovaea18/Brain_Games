@@ -3,14 +3,14 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class FifthGame {
+    public static final int ATTEMPTS_COUNT = 3;
     public static void play() {
         String userName = Engine.getName();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
         int correctAnswersCount = 0;
-        int attemptsCount = 3;
 
-        while (correctAnswersCount < attemptsCount) {
+        while (correctAnswersCount < ATTEMPTS_COUNT) {
             int number = Engine.generateRandomNumber();
             Engine.generateQuestion(String.valueOf(number));
             String correctAnswer = isPrime(number) ? "yes" : "no";
