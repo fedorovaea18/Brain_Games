@@ -10,6 +10,6 @@
 [![asciicast](https://asciinema.org/a/cl4NMitZBgrdBDuV11U2Ug7km.svg)](https://asciinema.org/a/cl4NMitZBgrdBDuV11U2Ug7km)
 ### Progression - игра "Арифметическая прогрессия"
 [![asciicast](https://asciinema.org/a/J68aB24vFB6vlHT4izCxakBWU.svg)](https://asciinema.org/a/J68aB24vFB6vlHT4izCxakBWU)
-### Prime - игра "Просто ли число?"
+### Prime - игра "Простое ли число?"
 [![asciicast](https://asciinema.org/a/8KdWlmB6VwCQqvAAv5vDbRlJt.svg)](https://asciinema.org/a/8KdWlmB6VwCQqvAAv5vDbRlJt)
 
