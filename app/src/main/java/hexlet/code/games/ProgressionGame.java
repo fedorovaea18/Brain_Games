@@ -43,7 +43,7 @@ public class ProgressionGame {
         for (int i = 0; i < progression.length; i++) {
             viewProgression[i] = (i == missingIndex) ? ".." : String.valueOf(progression[i]);
         }
-        return String.join(" ", progression);
+        return String.join(" ", viewProgression);
     }
 
     private static int generateRandomLength() {
