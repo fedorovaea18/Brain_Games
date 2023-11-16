@@ -3,6 +3,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/34519cd076671425039d/maintainability)](https://codeclimate.com/github/fedorovaea18/java-project-61/maintainability)
 
 [![asciicast](https://asciinema.org/a/nD63oIASqzduhJccPr6pcCu63.svg)](https://asciinema.org/a/nD63oIASqzduhJccPr6pcCu63)
+[![asciicast](https://asciinema.org/a/XuYgjYyJcQ9JXcZj9zlwhDYPk.svg)](https://asciinema.org/a/XuYgjYyJcQ9JXcZj9zlwhDYPk)
+
+
 https://asciinema.org/a/s5n00wb1tsMi38tPoSzBUgypw - проверка калькулятора
 https://asciinema.org/a/YOlEwoJCri1qYTHjPolJkgqV2 - проверка НОД
 https://asciinema.org/a/B8DyZibSnOL4vM81mCwshSwGR - проверка прогрессии
