@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/fedorovaea18/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/fedorovaea18/java-project-61/actions)
-[![Maintainability](https://codeclimate.com/github/fedorovaea18/java-project-61/maintainability)]([https://codeclimate.com/github/hexlet-boilerplates/java-package/maintainability])
+[![Maintainability](https://codeclimate.com/github/fedorovaea18/java-project-61/maintainability)](https://codeclimate.com/github/hexlet-boilerplates/java-package/maintainability)
 
 https://asciinema.org/a/cQosRv0neHjidhCftic2KLich - проверка приветствия и на чётность
 https://asciinema.org/a/s5n00wb1tsMi38tPoSzBUgypw - проверка калькулятора
