@@ -5,9 +5,6 @@
 [![asciicast](https://asciinema.org/a/nD63oIASqzduhJccPr6pcCu63.svg)](https://asciinema.org/a/nD63oIASqzduhJccPr6pcCu63)
 [![asciicast](https://asciinema.org/a/XuYgjYyJcQ9JXcZj9zlwhDYPk.svg)](https://asciinema.org/a/XuYgjYyJcQ9JXcZj9zlwhDYPk)
 [![asciicast](https://asciinema.org/a/cl4NMitZBgrdBDuV11U2Ug7km.svg)](https://asciinema.org/a/cl4NMitZBgrdBDuV11U2Ug7km)
-
-https://asciinema.org/a/B8DyZibSnOL4vM81mCwshSwGR - проверка прогрессии
-https://asciinema.org/a/HZcnqUaJUSODMDNCy0lk2GSwH - проверка является ли число простым
-https://asciinema.org/a/iOpwPSg5cK0ixI092B6BT4Op8 - полный проект
-
+[![asciicast](https://asciinema.org/a/J68aB24vFB6vlHT4izCxakBWU.svg)](https://asciinema.org/a/J68aB24vFB6vlHT4izCxakBWU)
+[![asciicast](https://asciinema.org/a/8KdWlmB6VwCQqvAAv5vDbRlJt.svg)](https://asciinema.org/a/8KdWlmB6VwCQqvAAv5vDbRlJt)
 
