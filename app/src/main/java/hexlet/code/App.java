@@ -1,10 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.FirstGame;
-import hexlet.code.games.SecondGame;
-import hexlet.code.games.ThirdGame;
-import hexlet.code.games.FourthGame;
-import hexlet.code.games.FifthGame;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.GcdGame;
+import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.PrimeGame;
 
 import java.util.Scanner;
 
@@ -40,19 +40,19 @@ public class App {
                 Cli.greeting();
                 break;
             case EVEN_GAME:
-                FirstGame.play();
+                EvenGame.play();
                 break;
             case CALC_GAME:
-                SecondGame.play();
+                CalcGame.play();
                 break;
             case GCD_GAME:
-                ThirdGame.play();
+                GcdGame.play();
                 break;
             case PROGRESSION_GAME:
-                FourthGame.play();
+                ProgressionGame.play();
                 break;
             case PRIME_GAME:
-                FifthGame.play();
+                PrimeGame.play();
                 break;
             default:
                 System.out.println("Wrong choice");
