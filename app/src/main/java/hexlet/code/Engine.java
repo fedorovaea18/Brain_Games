@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int COUNT_ATTEMPTS = 3;
+    public static final String WELCOME = "\nWelcome to the Brain Games!\nMay I have your name? ";
     public static final int MIN_LENGTH = 1;
     public static final int MAX_LENGTH = 50;
 
     public static void run(String rules, String[][] questionsAndAnswers) {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        System.out.print(WELCOME);
         Scanner scanner = new Scanner(System.in);
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
@@ -31,9 +31,5 @@ public class Engine {
             }
         }
         System.out.println("Congratulations, " + userName + "!");
-    }
-
-    public static int generateRandomNumber() {
-        return (int) (Math.random() * (MAX_LENGTH - MIN_LENGTH + 1)) + MIN_LENGTH;
     }
 }
