@@ -1,4 +1,4 @@
-### Hexlet tests and linter status:
+# **Brain Games**
 [![Actions Status](https://github.com/fedorovaea18/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/fedorovaea18/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/34519cd076671425039d/maintainability)](https://codeclimate.com/github/fedorovaea18/java-project-61/maintainability)
 
