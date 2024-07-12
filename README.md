@@ -15,28 +15,29 @@ make run
 ```
 make lint
 ```
+## **Examples of usage:**
 
-### Even
+**Even**
 This game shows the user a random number. And he needs to answer "yes" if the number is even, or "no" if it is odd.
 
 [![asciicast](https://asciinema.org/a/nD63oIASqzduhJccPr6pcCu63.svg)](https://asciinema.org/a/nD63oIASqzduhJccPr6pcCu63)
 
-### Calculator
+**Calculator**
 This game shows the user a random mathematical expression that needs to be calculated and written down the correct answer. There are only three type of question: addition, subtaction and multiplication.
 
 [![asciicast](https://asciinema.org/a/XuYgjYyJcQ9JXcZj9zlwhDYPk.svg)](https://asciinema.org/a/XuYgjYyJcQ9JXcZj9zlwhDYPk)
 
-### GCD
+**GCD**
 This game shows the user two random numbers. He must find the largest common divisor of these numbers.
 
 [![asciicast](https://asciinema.org/a/cl4NMitZBgrdBDuV11U2Ug7km.svg)](https://asciinema.org/a/cl4NMitZBgrdBDuV11U2Ug7km)
 
-### Progression
+**Progression**
 This game shows a series of numbers forming an arithmetic progression by missing any of the numbers. The user must guess this number.
 
 [![asciicast](https://asciinema.org/a/J68aB24vFB6vlHT4izCxakBWU.svg)](https://asciinema.org/a/J68aB24vFB6vlHT4izCxakBWU)
 
-### Prime 
+**Prime**
 This game shows the user a random number. He must answer is the number prime.
 
 [![asciicast](https://asciinema.org/a/8KdWlmB6VwCQqvAAv5vDbRlJt.svg)](https://asciinema.org/a/8KdWlmB6VwCQqvAAv5vDbRlJt)
