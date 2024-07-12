@@ -4,6 +4,18 @@
 
 This project is a collection of five concole games. In each game, it is necessary to answer a number of questions correctly in order to complete the game. The game ends if three correct answers are given. Incorrect answers end the game immediately.
 
+## **Installing**
+```
+git clone git@github.com:fedorovaea18/Brain_Games.git
+cd Brain_Games/app
+make run
+```
+
+## **Run checkstyle**
+```
+make lint
+```
+
 ### Even
 This game shows the user a random number. And he needs to answer "yes" if the number is even, or "no" if it is odd.
 
